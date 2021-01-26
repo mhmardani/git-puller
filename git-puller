@@ -1,0 +1,18 @@
+#!/bin/sh
+
+if [[ $1 == "-b" ]]
+then
+BRANCH=$2
+else
+BRANCH=master
+fi
+
+echo 'Your target branch is: '$BRANCH
+for entry in "$PWD"/*
+do
+  cd $entry
+  git pull origin $BRANCH &
+done
+
+wait
+echo "All projects are pulled."
