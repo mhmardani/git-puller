@@ -1,6 +1,6 @@
 # git-puller
 
-This is a shell script file to pull your projects from git repository.
+This is a shell script file to pull your projects parallel from git repository.
 
 ## How to use
 
