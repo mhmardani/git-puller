@@ -11,7 +11,7 @@ echo 'Your target branch is: '$BRANCH
 for entry in "$PWD"/*
 do
   cd $entry
-  git pull origin $BRANCH &
+  git checkout $BRANCH && git pull &
 done
 
 wait
